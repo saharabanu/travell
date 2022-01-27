@@ -1,0 +1,102 @@
+.product-rating{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+.fa-star.filled{
+   color: #FFC014;
+
+}
+.fa-star.empty{
+    color:#AEAEAE; 
+}
+
+/* .productBox:hover{
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+	
+}
+.blogs{
+    background: #f5f5f5;
+  
+}
+.blogs .slide{
+    width:35rem;
+}
+.blogs .slide .image{
+    height:25rem;
+    overflow:hidden;
+    position:relative;
+
+}
+.blogs .slide .image img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+
+}
+.blogs .slide .image span{
+    position:absolute;
+    bottom:-10rem;
+    left:50%;
+    transform:translateX(-50%);
+    padding:.5rem 1.5rem;
+    font-size: 2rem;
+    color:white;
+    background:black;
+    z-index: 10;
+}
+.blogs .slide:hover .image span{
+    bottom: 1rem;
+}
+.blogs .slide:hover .image img{
+    transform: scale(1.1);
+}
+.blogs .slide .content{
+    padding:2rem;
+    background:white;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    border:.1rem solid #aaa;
+    margin-bottom:4rem;
+
+}
+.blogs .slide .content .icon{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.blogs .slide .content .icon a{
+    font-size: 1.5rem;
+    color:#666;
+}
+.blogs .slide .content .icon a i{
+    padding-right:.7rem;
+    color:peru;
+}
+.blogs .slide .content .icon a:hover {
+   color:peru;
+}
+.blogs .slide .content .title{
+    font-size:2.5rem;
+    color:black;
+}
+.blogs .slide .content .title:hover{
+    text-decoration: underline;
+}
+.blogs .slide .content p{
+    font-size: 1.6rem;
+    line-height: 2;
+    color:#666;
+    padding:1rem 0;
+}
+.btn{
+    margin-top:1rem;
+    display: inline-block;
+    background:peru;
+    color: white;
+    cursor:pointer;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+
+
+} */
