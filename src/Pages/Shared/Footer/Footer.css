@@ -1,0 +1,26 @@
+.social-media-customize{
+    text-align: center;
+    height: 35px ;
+    margin-top: 9px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+.social-media-customize:hover{
+    background-color: peru;
+   transform: scale(1.05);
+   
+ 
+}
+.custom-footer-link{
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+.custom-footer-link:hover{
+   color:saddlebrown;
+    transform: scale(1.02);
+   
+}
+.footer-end{
+    color:orange;
+}
+
