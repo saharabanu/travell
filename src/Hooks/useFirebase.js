@@ -99,8 +99,10 @@ const useFirebase = () => {
           return ()=> unsubscribed;
     },[]);
 
+    
+
     useEffect(()=>{
-      fetch(`https://lit-coast-44901.herokuapp.com/${user.email}`)
+      fetch(`https://lit-coast-44901.herokuapp.com/users/${user.email}`)
       .then(res=>res.json())
       .then(data=> setAdmin(data.admin))
     },[user.email])

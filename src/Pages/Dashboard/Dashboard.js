@@ -29,6 +29,7 @@ const Dashboard = () => {
                            {admin && <> <h5 className="text-white">Admin Dashboard</h5>
                                 
                                 <Link to={`/dashboard/addBlog`}> <span><i className="fas fa-plus me-2"></i></span>Add Blog</Link>
+                                <Link to={`/dashboard/allUserExperiences`}> <span><i className="fas fa-plus me-2"></i></span>All User Experiences</Link>
                                 <Link to={`/dashboard/makeAdmin`}> <span><i className="fas fa-user-cog me-2"></i></span> Make Admin </Link>
                                 <Link to={`/dashboard/manageBlogs`}> <span><i className="fab fa-product-hunt me-2"></i></span>Manage Blogs</Link></>}
                             

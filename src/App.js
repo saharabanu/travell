@@ -2,8 +2,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
+import AboutUs from './Pages/AboutUs/AboutUs';
 import AdminRoute from './Pages/AdminRoute/AdminRoute';
 import AddBlog from './Pages/Dashboard/AddBlog/AddBlog';
+import AllUserExperiences from './Pages/Dashboard/AllUserExperiences/AllUserExperiences';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
 import ManageBlogs from './Pages/Dashboard/ManageBlogs/ManageBlogs';
@@ -24,10 +26,11 @@ function App() {
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/aboutUs" element={<AboutUs/>} />
         <Route path="/singleBlog/:id" element={<PrivateRoute><SingleBlog/></PrivateRoute>} />
-        <Route path="/userExperience/:userId" element={<ExperienceDetails />} />
+        <Route path="/userExperience/:userId" element={<PrivateRoute><ExperienceDetails /></PrivateRoute>} />
 
-        <Route path="/dashboard" element={<Dashboard />} />
+        
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
@@ -37,13 +40,11 @@ function App() {
                             </Route>
                             
                             
-            
-                            <Route path={`/dashboard/userExperience`} element={<UserExperience />}>   
+                            <Route path={`/dashboard/userExperience`} element={<UserExperience/>}>   
                             </Route>
                             
-                            <Route path={`/dashboard/addBlog`} element={<AdminRoute><AddBlog/></AdminRoute>}>
-                                
-                            </Route>
+                            <Route path={`/dashboard/addBlog`} element={<AdminRoute><AddBlog/></AdminRoute>}></Route>
+                            <Route path={`/dashboard/allUserExperiences`} element={<AdminRoute><AllUserExperiences/></AdminRoute>}></Route>
                             <Route path={`/dashboard/makeAdmin`} element={<AdminRoute><MakeAdmin /></AdminRoute>}>
                                 
                             </Route>
@@ -52,6 +53,8 @@ function App() {
                             </Route>
 
        </Route>
+
+        
 
         <Route path="*" element={<NotFound />} />
       </Routes>

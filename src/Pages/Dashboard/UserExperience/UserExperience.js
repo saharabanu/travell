@@ -29,6 +29,8 @@ const UserExperience = () => {
                 <input className="w-50  rounded-3 py-2 border-0" defaultValue={user.displayName} {...register("name")} /><br />
 
                 <input className="w-50 rounded-3 my-3 py-2 border-0" defaultValue={user.email} {...register("email", { required: true })} /><br />
+                <input className="w-50  rounded-3 py-2 border-0" placeholder="Blog Title" type="text"{...register("title")} /><br />
+               
 
                 <input className="w-50  rounded-3 py-2 border-0" placeholder="Photo" {...register("img")} /><br />
 

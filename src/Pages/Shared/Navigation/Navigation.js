@@ -29,6 +29,15 @@ const Navigation = () => {
                                 >
                                 Home
                                 </NavLink>
+                                    <NavLink className="navigation-items"
+                                to="/aboutUs"
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                                >
+                                About Us
+                                </NavLink>
                                     
                              {user?.email ? <>
                                     <NavLink className="navigation-items"
