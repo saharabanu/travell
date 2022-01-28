@@ -9,17 +9,18 @@ const SingleBlog = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/blogs/${id}`)
+        axios.get(`https://lit-coast-44901.herokuapp.com/blogs/${id}`)
             .then(res => setBlog(res.data))
     }, [id])
     
     return (
         <div>
             <div className="card h-100 container">
-            <img src={blog?.img} className="card-img-top h-50 " alt="..."/>
+            <img src={blog?.img} className="card-img-top w-100 h-25 " alt="..."/>
             <div className="card-body">
                 
                 <h5 className="card-title">{blog?.title}</h5>
+                <p> Date :{blog.date}</p>
                 <h5>Price: ${blog?.cost}</h5>
                 <p className="card-text">{blog?.description}</p>
                 <h5>Location: {blog.location}</h5>

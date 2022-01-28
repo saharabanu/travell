@@ -10,8 +10,9 @@ const Dashboard = () => {
     
     return (
         <div className="dashboard-bg">
+             
             
-
+ 
             <Row className="g-0  ">
                 <Col md={2} className="custom-dashboard-link" >
                     
@@ -22,8 +23,8 @@ const Dashboard = () => {
                             {!admin && <><h5 className='text-white'>Customer Dashboard</h5>
                             <Link to=""> <span><i className="fas fa-shopping-bag me-2"></i></span>Dashboard</Link>
                             
+                            <Link to={`/dashboard/userExperience`}> <span><i className="fas fa-star-half-alt me-2"></i></span> User Experience</Link></>}
                             
-                            <Link to={`/dashboard/review`}> <span><i className="fas fa-star-half-alt me-2"></i></span> Review</Link></>}
                        
                            {admin && <> <h5 className="text-white">Admin Dashboard</h5>
                                 
@@ -55,7 +56,7 @@ const Dashboard = () => {
                     <Outlet></Outlet>
                     
                 </Col>
-            </Row>
+            </Row> 
 
             
        

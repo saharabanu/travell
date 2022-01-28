@@ -8,7 +8,7 @@ const AddBlog = () => {
     const { register, handleSubmit,reset } = useForm();
 
     const onSubmit = data =>{
-        fetch('http://localhost:5000/blogs',{
+        fetch('https://lit-coast-44901.herokuapp.com/blogs',{
             method:"POST",
             headers:{
                 'content-type': 'application/json'
@@ -26,7 +26,7 @@ const AddBlog = () => {
     }
     return (
         <div className="add-service">
-            <h2>Add A Blog</h2>
+            <h2>Add Your Experiences as a Blog</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="dashboard-from ms-3">
 
                         <input placeholder="Blog Title" type="text" {...register("title", { required: true })} />

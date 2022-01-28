@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Alert } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import './MakeAdmin.css';
 
 const MakeAdmin = () => {
     const [success, setSuccess] = useState(false);
@@ -10,8 +11,12 @@ const MakeAdmin = () => {
 
 
     const onSubmit = (data) => {
-        fetch("http://localhost:5000/users/admin", {
+      
+        fetch("https://lit-coast-44901.herokuapp.com/users/admin", {
           method: "PUT",
+          headers:{
+            'content-type':'application/json'
+          },
           
           body: JSON.stringify(data),
         })
@@ -28,11 +33,11 @@ const MakeAdmin = () => {
         reset()
       };
     return (
-        <div>
+        <div className='admin mx-auto'>
         <h1>Make Admin</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
-            className="input-field w-25"
+            className="input-field w-50"
             name="email"
             placeholder="Email"
             type="email"
@@ -41,7 +46,7 @@ const MakeAdmin = () => {
           <br />
   
           <input
-            className="submit-btn btn btn-danger mt-3 border-0 w-25"
+            className="submit-btn btn btn-danger mt-3 border-0 w-50"
             type="submit"
             value="Make as Admin"
           />

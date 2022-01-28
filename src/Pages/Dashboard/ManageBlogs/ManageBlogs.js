@@ -9,13 +9,13 @@ const ManageBlogs = () => {
     const [allBlogs, setAllBlogs] = useState({});
 
     useEffect(() => {
-        axios.get('http://localhost:5000/blogs')
+        axios.get('https://lit-coast-44901.herokuapp.com/blogs')
             .then(res => setAllBlogs(res.data))
     }, [])
     const handleDeleteProduct = id => {
         const sure = window.confirm("are you sure to delete this ?");
         if (sure) {
-            axios.delete(`http://localhost:5000/blogDelete/${id}`)
+            axios.delete(`https://lit-coast-44901.herokuapp.com/blogDelete/${id}`)
                 .then(res => {
                     if (res.data.deletedCount) {
                         alert("deleted successful");
@@ -26,7 +26,7 @@ const ManageBlogs = () => {
         }
     }
     const getBlogUpdate = id => {
-        axios.get(`http://localhost:5000/singleBlog/${id}`)
+        axios.get(`https://lit-coast-44901.herokuapp.com/singleBlog/${id}`)
             .then(res => {
                 setSelectedBlog(res.data)
                 handleupdatingMOdalShow();
@@ -47,11 +47,11 @@ const ManageBlogs = () => {
     const handleUpdateSubmit = (e) => {
         e.preventDefault();
         handleupdatingMOdalClose();
-        axios.put(`http://localhost:5000/blogs/${selectedBlog._id}`, selectedBlog)
+        axios.put(`https://lit-coast-44901.herokuapp.com/blogs/${selectedBlog._id}`, selectedBlog)
             .then(res => {
                 if (res.data.modifiedCount > 0) {
                     alert("Blog updated successfully")
-                    axios.get('http://localhost:5000/blogs')
+                    axios.get('https://lit-coast-44901.herokuapp.com/blogs')
                         .then(res => setAllBlogs(res.data))
 
 
